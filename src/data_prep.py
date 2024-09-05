@@ -31,5 +31,6 @@ def get_data_from_api(url="https://api.carbonintensity.org.uk/intensity"):
                         "French Imports":"French_imports"})
     df=df.set_index("date")
     df['index']=LabelEncoder().fit_transform(df['index'])
+    df=df.astype({col:'float32' for col in df.select_dtypes(include='int64').colums})
 
     return df
