@@ -6,6 +6,7 @@ import requests
 import pandas as pd
 import numpy as np
 from pandas import json_normalize
+from sklearn.preprocessing import LabelEncoder
 
 url_intensity="https://api.carbonintensity.org.uk/intensity"
 url_factors="https://api.carbonintensity.org.uk/intensity/factors"
@@ -29,5 +30,6 @@ def get_data_from_api(url="https://api.carbonintensity.org.uk/intensity"):
                         "Dutch Imports":"Dutch_imports",
                         "French Imports":"French_imports"})
     df=df.set_index("date")
-    
+    df['index']=LabelEncoder().fit_transform(df['index'])
+
     return df
