@@ -1,5 +1,5 @@
 # Carbon Intensity Analysis in UK Areas
-
+<img src="img/1.jpg" alt="Data Flow" style="width:100%; max-width:600px;">
 This project focuses on analyzing carbon intensity levels across various regions of the UK. The data is retrieved from a public API and then processed and visualized using Python scripts to gain insights into the UK's energy mix and carbon emissions.
 
 ## Project Structure
@@ -14,9 +14,6 @@ Once the data is fetched, this script cleans and prepares it for analysis. Tasks
 
 ### `producer.py`
 The script responsible for further transforming the data or making it ready for long-term storage, databases, or real-time data streams.
-
-### `train.py`
-This script trains machine learning models using the cleaned data to either predict future carbon intensity levels or detect patterns within the dataset.
 
 ### `utils.py`
 Utility functions that handle common tasks across the project, like logging, formatting, or error handling.
@@ -33,12 +30,8 @@ Here’s a quick summary of how data flows through the project:
 4. **Model Training**: The `train.py` script trains a machine learning model on the processed data.
 5. **Evaluation**: Evaluate the model’s performance to ensure accurate predictions.
 
-## Example Images
+<img src="img/2.jpg" alt="Data Flow" style="width:100%; max-width:600px;">
 
-Here are some visuals related to the project:
-
-### Flow of Data through the Project
-![Data Flow](path/to/data_flow_image.png)
 
 ### Carbon Intensity Trends in the UK
 ![Carbon Intensity Trends](path/to/carbon_trends_image.png)
