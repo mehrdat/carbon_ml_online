@@ -39,8 +39,8 @@ def process_message(message):
     try:
         data=json.loads(message)
         data=pd.DataFrame([data])
-        input_tensor=torch.tensor(data.drop(['intensity'],axis=1).values,dtype=torch.float32)
-        target_tensor=torch.tensor(data['intensity'].values,dtype=torch.float32)
+        input_tensor=torch.tensor(data.drop(['actual'],axis=1).values,dtype=torch.float32)
+        target_tensor=torch.tensor(data['actual'].values,dtype=torch.float32)
         
         model.train()
         optimizer.zero_grad()
