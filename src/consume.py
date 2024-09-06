@@ -37,6 +37,19 @@ def process_message(message):
     # data=json.loads(message)
     # print(f"message recieved {data}")
     try:
+        data=json.loads(message)
+        data=pd.DataFrame([data])
+        input_tensor=torch.tensor(data.drop(['intensity'],axis=1).values,dtype=torch.float32)
+        target_tensor=torch.tensor(data['intensity'].values,dtype=torch.float32)
+        
+        model.train()
+        optimizer.zero_grad()
+        output=model(input_tensor)
+        loss=criterion(output,target_tensor)
+        
+        loss.backward()
+        optimizer.step()
+        
         
         
     except (KeyError,TypeError,ValueError) as e:
