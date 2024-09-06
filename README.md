@@ -1,5 +1,7 @@
 # Carbon Intensity Analysis in UK Areas
-<img src="img/1.jpg" alt="Data Flow" style="width:65%; max-width:300px;">
+<div style="text-align: center;">
+    <img src="img/1.jpg" style="width:85%; max-width:300px;">
+</div>
 This project focuses on analyzing carbon intensity levels across various regions of the UK. The data is retrieved from a public API and then processed and visualized using Python scripts to gain insights into the UK's energy mix and carbon emissions.
 
 ## Project Structure
@@ -29,9 +31,9 @@ Here’s a quick summary of how data flows through the project:
 3. **Feature Engineering**: Add new features or transform the data in `producer.py`.
 4. **Model Training**: The `train.py` script trains a machine learning model on the processed data.
 5. **Evaluation**: Evaluate the model’s performance to ensure accurate predictions.
-
-<img src="img/2.jpg" alt="Data Flow" style="width:50%; max-width:300px;">
-
+<div style="text-align: center;">
+    <img src="img/2.jpg" style="width:50%; max-width:300px;">
+</div>
 ## Conclusion
 
 This project uses real-time data from the UK Carbon Intensity API to analyze carbon emissions in different regions. By leveraging machine learning models, it also attempts to predict future trends in carbon intensity, providing a comprehensive look into the carbon emissions landscape in the UK.
